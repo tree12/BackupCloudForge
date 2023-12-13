@@ -1,0 +1,90 @@
+﻿@using BedarfsCheck.Controllers
+@model BedarfsCheck.Data.InsuranceData
+
+@{
+    Layout = null;
+    var items = MainController.Items;
+}
+
+<link rel="stylesheet" type="text/css" href="@Url.Content("~/css/edit.css")">
+<script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script> 
+<script type="text/javascript">    
+</script>
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
+//]]>
+
+        var insurance = @Json.Serialize(@Model);
+        var items = @Json.Serialize(@MainController.Items);
+
+
+        function save() {
+            
+            insurance["Description"] = $("#Description").val();
+
+            insurance["HtmlText"] = nicEditors.findEditor('HtmlText').getContent();
+
+            for (var item in items) {
+                insurance["levelDict"][item] = $("#" + item).val();
+            }      
+
+            var data = JSON.stringify(insurance);
+            $.ajax({
+                url: "@Url.Action("Save")", // /Home/ReferralsList'
+                type: "POST",
+                contentType: "application/json",
+                //dataType: "json",
+                data: data,
+                success: function(partial) {
+                    location.reload();
+                }
+            });
+        };
+
+    </script>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>InsuranceData</h4>
+<hr/>
+<input id="Description" value="@Model.Description"/>
+<textarea id ="HtmlText" style="width: 100%;">
+       @Model.HtmlText
+</textarea><br />
+<table>
+    <thead>    
+    @foreach (var item in items)
+    {
+        <th>@item.Value.Description</th>
+    }
+    </thead><tbody>
+    <tr>    
+        @foreach (var item in items)
+        {
+            <td>
+                <input id="@item.Key" class="itemclass" type="number" min="-100" max="100" step="1" value="@(Model.LevelDict.ContainsKey(item.Key) ? Model.LevelDict[item.Key] : 0)" />
+            </td>
+        }
+    </tr>
+    </tbody>
+</table>
+    
+<button id="btn_Save" onclick="save()">Save</button>
+
+<div>
+    <a href="@Url.Content("~/api/admin")">Zurück zur Liste</a>
+</div>
+
+</body>
+</html>

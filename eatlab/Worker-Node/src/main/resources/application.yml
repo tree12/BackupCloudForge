@@ -1,0 +1,39 @@
+eatlab:
+  dms:
+    worker:
+      id: node-1
+      rename: true
+      renameOpt:
+        search: OK
+        replace: DONE
+      scan:
+        interval: 5000
+        directory: F:/temp/eatlab_test
+        matcher: .*_OK
+
+    api:
+      url: http://192.168.0.199:8080
+      token: 1234
+
+---
+spring.profiles: dev
+
+eatlab:
+  dms:
+    worker:
+      scan:
+        directory: /Users/ton/test/worker
+
+    api:
+      url: http://localhost:8080
+      token: 1234
+
+
+---
+spring.profiles: dev-atom
+
+eatlab:
+  dms:
+    worker:
+      scan:
+        directory: F:\temp\eatlab_test

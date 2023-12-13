@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AignerDLL.DataObjects
+{    
+    [AttributeUsage(AttributeTargets.Property)]
+    public class FieldAttribute:Attribute
+    {
+
+    }
+}

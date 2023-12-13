@@ -1,0 +1,68 @@
+﻿@using BedarfsCheck.Controllers
+@using BedarfsCheck.Data
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/css/edit.css")">
+   
+    <meta name="viewport" content="width=device-width"/>
+    <title>IndexView</title>
+</head>
+<body>
+<a href="@Url.Action("CreateDB")">Datenbank erstellen (falls noch nicht erstellt!)</a>
+<table>
+    <thead><tr>
+        <th>Schlüssel</th>
+        <th>Beschreibung</th>
+        <th>Aktionen</th>
+    </tr></thead>
+    <tbody>
+    
+
+    @foreach (InsuranceData insurance in @Model)
+    {
+        <tr>
+            <td>@insurance.Name_PK</td>
+            <td>@insurance.Description</td>
+            <td><a href="/api/insurance/Edit?name_pk=@insurance.Name_PK">edit<img src="@Url.Content("~/pic/edit.png")"/></a></td>
+                
+        </tr>
+    }            
+
+        
+
+    </tbody>
+</table>
+<form method="POST" action="@Url.Action("CreateInsurance")">
+    <table style="margin-bottom: 50px">
+        <thead><th style="font-size: larger">Neue Versicherung anlegen</th></thead>
+        <tbody>
+        <tr>
+            <td>
+                Schlüssel(achtung! keine Leerzeichen,keine sonderzeichen):
+            </td>
+            <td>
+                <input id="name_PK" name="name_PK"/>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Beschreibung:</td>
+            <td><input id="description" name="description"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="Submit">Hinzufügen</button></td>
+        </tr>
+        </tbody>
+    </table>
+    
+</form>
+</body>
+</html>

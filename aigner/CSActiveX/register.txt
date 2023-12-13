@@ -1,0 +1,1 @@
+﻿regasm CSActiveX.dll /codebase /tlb

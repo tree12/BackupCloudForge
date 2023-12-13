@@ -1,0 +1,39 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.csproj.user
+*.DotSettings.user
+obj
+bin
+/aigner/ActiveX/.vs/ActiveX/v15
+/aigner/FileMgr/obj/Debug
+/aigner/AignerDLL/obj/Debug
+/aigner/ActiveX/TestForm/obj/Debug
+/aigner/ActiveX/RegisterControl/obj/Debug
+/aigner/ActiveX/ActiveX/obj/Debug
+/aigner/_ReSharper.Caches/ReSharperPlatformVs16201_c230208d.Aigner.00
+/aigner/Console/obj/Debug/Console.csprojAssemblyReference.cache
+/aigner/Console/obj/Debug/.NETFramework,Version=v4.5.2.AssemblyAttributes.cs
+/aigner/Console/obj/Debug
+/aigner/AignerTest/obj/Debug/AignerTest.csprojAssemblyReference.cache
+/aigner/AignerTest/obj/Debug/.NETFramework,Version=v4.5.2.AssemblyAttributes.cs
+/aigner/AignerTest/obj/Debug
+/aigner/packages
+/aigner/.vs/Aigner
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Visual Studio 2015 cache/options directory
+.vs/
+/aigner/_ReSharper.Caches
+/aigner/EDI/EDI Templates/
+/aigner/EDI/Dlls/
+/aigner/EDI/EdiFabric.10.2.1.nupkg
+/aigner/EDI/EDI.Web/DataFiles/*
+!/aigner/EDI/EDI.Web/DataFiles/.gitkeep 
+/aigner/EDI/EDI.Web/Properties/PublishProfiles/FolderProfile.pubxml
+/aigner/EDI/EDI.Web/Properties/PublishProfiles/FolderProfile.pubxml.user

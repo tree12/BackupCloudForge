@@ -1,0 +1,1125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EDI.DataAccess</name>
+    </assembly>
+    <members>
+        <member name="P:EDI.DataAccess.Entities.Contact.ContactCode">
+            <summary>
+            0210 SG5 C 5 2 CTA-COM 0220 10 CTA M 1 2 Contact information
+            0220 10 CTA M 1 2 Contact information
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.Contact.Name">
+            <summary>
+            0210 SG5 C 5 2 CTA-COM 0220 10 CTA M 1 2 Contact information
+            3412 Department or employee C an..35
+            </summary>
+        </member>
+        <member name="T:EDI.DataAccess.Entities.DeliveryOrTransportTerm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.DeliveryOrTransportTerm.FunctionCode">
+             <summary>
+             0430 19 TOD M 1 1 Terms of delivery or transport - 4055 Terms of delivery or transport function, coded C an..3
+            
+             5 Transport condition
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.DeliveryOrTransportTerm.Code">
+             <summary>
+             0430 19 TOD M 1 1 Terms of delivery or transport - 4053 Terms of delivery or transport,coded C an..3
+            
+             Incoterms will be used
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.DeliveryOrTransportTerm.Location">
+            <summary>
+            0420 SG11 C 5 1 TOD-LOC
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.DeliveryReferenceQualifier">
+             <summary>
+             080 SG1 C 10 1 RFF-DTM
+             0090 7 RFF M 1 1 Reference
+             1153 Reference qualifier M an..3 
+            
+             ON Order number (purchase)
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.DeliveryReferenceNumber">
+             <summary>
+             080 SG1 C 10 1 RFF-DTM
+             0090 7 RFF M 1 1 Reference
+             1154 Reference number C an..35
+            
+             Reference Number
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.DeliveryReferenceDate">
+             <summary>
+             0080 SG1 C 10 1 RFF-DTM
+             0100 8 DTM C 5 2 Date/time/period
+            
+             
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.DutyTaxFeeQualifier">
+             <summary>
+             0240 SG6 C 5 1 TAX - 0250 21 TAX M 1 1 Duty/tax/fee details
+            
+             5283 Duty/tax/fee function qualifier M an..3
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.DutyTaxFeeCode">
+            <summary>
+            0240 SG6 C 5 1 TAX - 0250 21 TAX M 1 1 Duty/tax/fee details
+            C241 Duty/tax/fee type C
+            5153 Duty/tax/fee type, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.DutyTaxFeeRate">
+            <summary>
+            0240 SG6 C 5 1 TAX - 0250 21 TAX M 1 1 Duty/tax/fee details
+            C243 Duty/tax/fee detail C
+            5278 Duty/tax/fee rate C an..17
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.DutyTaxFeeCategoryCode">
+             <summary>
+             0240 SG6 C 5 1 TAX - 0250 21 TAX M 1 1 Duty/tax/fee details
+            
+             5305 Duty/tax/fee category, coded C an..3
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.AllowanceChargeQualifier">
+            <summary>
+            0570 SG15 C 9999 1 ALC-SG18-SG19-SG21 - 0580 27 ALC M 1 1 Allowance or charge
+            5463 Allowance or charge qualifier M an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.SpecialServicesCode">
+            <summary>
+            0570 SG15 C 9999 1 ALC-SG18-SG19-SG21 - 0580 27 ALC M 1 1 Allowance or charge
+            7161 Special services, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.SpecialService">
+            <summary>
+            0570 SG15 C 9999 1 ALC-SG18-SG19-SG21 - 0580 27 ALC M 1 1 Allowance or charge
+            7160 Special service C an..35
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.PercentageQualifier">
+            <summary>
+            0660 SG18 D 1 2 PCD - 0670 28 PCD M 1 2 Percentage details
+            C501 Percentage details M
+            5245 Percentage qualifier M an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.Percentage">
+            <summary>
+            0660 SG18 D 1 2 PCD - 0670 28 PCD M 1 2 Percentage details
+            C501 Percentage details M
+            5482 Percentage C n..10
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.MonetaryTypeQualifier">
+            <summary>
+            0690 SG19 D 2 2 MOA 0700 29 MOA M 1 2 Monetary amount
+            C516 Monetary amount M
+            5025 Monetary amount type qualifier M an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.MonetaryAmount">
+            <summary>
+            0690 SG19 D 2 2 MOA 0700 - 29 MOA M 1 2 Monetary amount
+            C516 Monetary amount M
+            5004 Monetary amount C n..18
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.MonetaryCurrencyCode">
+            <summary>
+            0690 SG19 D 2 2 MOA - 0700 29 MOA M 1 2 Monetary amount
+            C516 Monetary amount M
+            6345 Currency, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.AllowanceDutyTaxFeeQualifier">
+            <summary>
+            0750 SG21 C 5 2 TAX - 0760 30 TAX M 1 2 Duty/tax/fee details
+            
+            5283 Duty/tax/fee function qualifier M an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.AllowanceDutyTaxFeeCode">
+            <summary>
+            0750 SG21 C 5 2 TAX - 0760 30 TAX M 1 2 Duty/tax/fee details
+            C241 Duty/tax/fee type C
+            5153 Duty/tax/fee type, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.AllowanceDutyTaxFeeRate">
+            <summary>
+            0750 SG21 C 5 2 TAX - 0760 30 TAX M 1 2 Duty/tax/fee details
+            C243 Duty/tax/fee detail C
+            5278 Duty/tax/fee rate C an..17
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.AllowanceDutyTaxFeeCategoryCode">
+             <summary>
+             0750 SG21 C 5 2 TAX - 0760 30 TAX M 1 2 Duty/tax/fee details
+            
+             5305 Duty/tax/fee category, coded C an..3
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.InvoiceMonetaryTypeQualifier">
+            <summary>
+            1810 SG48 M 1 1 MOA - 1820 45 MOA M 1 1 Monetary amount
+            C516 Monetary amount M 
+            5025 Monetary amount type qualifier M an..3 Invoice amount
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.InvoiceMonetaryAmount">
+            <summary>
+            1810 SG48 M 1 1 MOA - 1820 45 MOA M 1 1 Monetary amount
+            C516 Monetary amount M 
+            5004 Monetary amount C n..18
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.InvoiceMonetaryCurrency">
+            <summary>
+            1810 SG48 M 1 1 MOA - 1820 45 MOA M 1 1 Monetary amount
+            C516 Monetary amount M 
+            6345 Currency, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.TaxableMonetaryTypeQualifier">
+            <summary>
+            1810 SG48 M 1 1 MOA - 1820 46 MOA M 1 1 Monetary amount
+            C516 Monetary amount M 
+            5025 Monetary amount type qualifier M an..3  Taxable amount
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.TaxableMonetaryAmount">
+            <summary>
+            1810 SG48 M 1 1 MOA - 1820 46 MOA M 1 1 Monetary amount
+            C516 Monetary amount M 
+            5004 Monetary amount C n..18
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.TaxableMonetaryCurrency">
+            <summary>
+            1810 SG48 M 1 1 MOA - 1820 46 MOA M 1 1 Monetary amount
+            C516 Monetary amount M 
+            6345 Currency, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.TotalMonetaryTypeQualifier">
+            <summary>
+            1810 SG48 M 1 1 MOA - 1820 47 MOA M 1 1 Monetary amount
+            C516 Monetary amount M 
+            5025 Monetary amount type qualifier M an..3  Total line items amount
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.TotalMonetaryAmount">
+            <summary>
+            1810 SG48 M 1 1 MOA - 1820 47 MOA M 1 1 Monetary amount
+            C516 Monetary amount M 
+            5004 Monetary amount C n..18
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.TotalMonetaryCurrency">
+            <summary>
+            1810 SG48 M 1 1 MOA - 1820 47 MOA M 1 1 Monetary amount
+            C516 Monetary amount M 
+            6345 Currency, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.AmountDutyTaxFeeQualifier">
+            <summary>
+            1860 SG50 M 10 1 TAX-MOA - 1870 48 TAX M 1 1 Duty/tax/fee details
+            
+            5283 Duty/tax/fee function qualifier M an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.AmountDutyTaxFeeCode">
+            <summary>
+            1860 SG50 M 10 1 TAX-MOA - 1870 48 TAX M 1 1 Duty/tax/fee details
+            C241 Duty/tax/fee type C
+            5153 Duty/tax/fee type, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.AmountDutyTaxFeeRate">
+            <summary>
+            1860 SG50 M 10 1 TAX-MOA - 1870 48 TAX M 1 1 Duty/tax/fee details
+            C243 Duty/tax/fee detail C
+            5278 Duty/tax/fee rate C an..17
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.AmountDutyTaxFeeCategoryCode">
+             <summary>
+             1860 SG50 M 10 1 TAX-MOA - 1870 48 TAX M 1 1 Duty/tax/fee details
+            
+             5305 Duty/tax/fee category, coded C an..3
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.SumTaxMonetaryTypeQualifier">
+            <summary>
+            1860 SG50 M 10 1 TAX-MOA - 1880 49 MOA C 1 2 Monetary amount
+            C516 Monetary amount M 
+            5025 Monetary amount type qualifier M an..3  Total line items amount
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.SumTaxMonetaryAmount">
+            <summary>
+            1860 SG50 M 10 1 TAX-MOA - 1880 49 MOA C 1 2 Monetary amount
+            C516 Monetary amount M 
+            5004 Monetary amount C n..18
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.SumTaxMonetaryCurrency">
+            <summary>
+            1860 SG50 M 10 1 TAX-MOA - 1880 49 MOA C 1 2 Monetary amount
+            C516 Monetary amount M 
+            6345 Currency, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.SumTaxableMonetaryTypeQualifier">
+            <summary>
+            1860 SG50 M 10 1 TAX-MOA - 1880 50 MOA C 1 2 Monetary amount
+            C516 Monetary amount M 
+            5025 Monetary amount type qualifier M an..3  Total line items amount
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.SumTaxableMonetaryAmount">
+            <summary>
+            1860 SG50 M 10 1 TAX-MOA - 1880 50 MOA C 1 2 Monetary amount
+            C516 Monetary amount M 
+            5004 Monetary amount C n..18
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiInvoice.SumTaxableMonetaryCurrency">
+            <summary>
+            1860 SG50 M 10 1 TAX-MOA - 1880 50 MOA C 1 2 Monetary amount
+            C516 Monetary amount M 
+            6345 Currency, coded C an..3
+            </summary>
+        </member>
+        <member name="T:EDI.DataAccess.Entities.EdiMasterMessage">
+            <summary>
+            BGM - Beginning of Message
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.DocumentName">
+            <summary>
+            C002 Document/message name C -1001 Document/message name,
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.DocumentNumber">
+             <summary>
+             1004 Document/message number C an..35
+            
+             Unique identifier of a document.
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.MessageFunction">
+             <summary>
+             1225 Message function, coded C an..3
+            
+             9 Original
+             The message function of the given document.
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.DocumentDate">
+            ----------------------------------------------------------
+             <summary>
+             0030 5 DTM M 35 1 Date/time/period
+             
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.UnhMessageReferenceNumber">
+             <summary>
+             0062 Message reference number M an..14
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.TypeIdentifier">
+             <summary>
+             0065 Message reference number M an..6
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.TypeVersionNumber">
+             <summary>
+             0052 Message type version number M an..3
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.TypeReleaseNumber">
+             <summary>
+             0054 Message type release number M an..3
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.ControllingAgency">
+             <summary>
+             0051 Controlling agency M an..2
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.TextSubjectqualifier">
+             <summary>
+             0070 6 FTX C 99 1 Free text
+             4453 Text function, coded C an..3 C an..3 1 Text for subsequent use
+            
+             Free Text
+            
+             only if this is true: 4451 Text subject qualifier M an..3 M an..3 AAI General information
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.FreeTextCode">
+             <summary>
+             0070 6 FTX C 10 1 Free text
+             C107 Text reference C
+            
+             4441 Free text, coded M an..3
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.TaxFreeTextCode">
+             <summary>
+             0070 6 FTX C 10 1 Free text
+             C108 Text literal C
+            
+             4440 Free text M an..70
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.ReferenceQualifier">
+             <summary>
+             080 SG1 C 10 1 RFF-DTM
+             0090 7 RFF M 1 1 Reference
+             1153 Reference qualifier M an..3 
+            
+             ON Order number (purchase)
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.ReferenceNumber">
+             <summary>
+             080 SG1 C 10 1 RFF-DTM
+             0090 7 RFF M 1 1 Reference
+             1154 Reference number C an..35
+            
+             Reference Number
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.ReferenceDate">
+             <summary>
+             0080 SG1 C 10 1 RFF-DTM
+             0100 8 DTM C 5 2 Date/time/period
+            
+             
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.Currency">
+            <summary>
+            0280 SG7 C 5 1 CUX
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.Buyer">
+            <summary>
+            0110 SG2 C 99 1 NAD-SG5
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.Supplier">
+            <summary>
+             0110 SG2 C 99 1 NAD
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.PaymentTerm">
+            <summary>
+            0320 SG8 C 10 1 PAT-PCD
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.DeliveryOrTransportTerm">
+            <summary>
+            0420 SG11 C 5 1 TOD-LOC
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.LineItems">
+            <summary>
+            0930 SG25 C 200000 1 LIN-PIA-IMD-QTY-FTX-SG28-SG49
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.NumberOfSegment">
+             <summary>
+             2160 31 UNT M 1 0 MESSAGE TRAILER - 0074 Number of segments in a message M n..6
+            
+             The total number of segments in the message is detailed here.
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.MessageReferenceNumber">
+             <summary>
+             2160 31 UNT M 1 0 MESSAGE TRAILER - 0062 Message reference number M an..14
+            
+             The message reference number detailed here should equal the one specified in the UNH segment.
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.InterchangeControlCount">
+             <summary>
+             0000 32 UNZ M 1 0 INTERCHANGE TRAILER - 0036 Interchange control count M n..6
+            
+             
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMasterMessage.UnzInterchangeControlReference">
+             <summary>
+             0000 32 UNZ M 1 0 INTERCHANGE TRAILER - 0020 Interchange control reference M an..14
+            
+             
+             </summary>
+        </member>
+        <member name="T:EDI.DataAccess.Entities.EdiMessageHeader">
+            <summary>
+            UNB - NTERCHANGE HEADER
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMessageHeader.SenderUniqueId">
+             <summary>
+             S002 INTERCHANGE SENDER M - 0004 Sender identification M an..35
+            
+             Unique ID of the sender. Is always KTMAG.
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMessageHeader.SenderCode">
+             <summary>
+             S002 INTERCHANGE SENDER M - Partner identification codequalifier C an..4
+            
+             ZZZ Mutually defined
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMessageHeader.RecipientUniqueId">
+             <summary>
+             S003 INTERCHANGE RECIPIENT M - 0010 Recipient identification M an..35
+            
+             ZZZ Mutually
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMessageHeader.RecipientCode">
+            <summary>
+            0007 Partner identification code qualifier C an..4
+            
+            1 DUNS (Dun &amp; Bradstreet)
+            14 EAN (European Article Numbering Association)
+            ZZZ Mutually defined
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMessageHeader.DateOfPerparation">
+            <summary>
+            0017 Date of preparation M n6 + 0019 Time of preparation M n4
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMessageHeader.InterchangeControlReference">
+            <summary>
+            0020 Interchange control reference M an..14
+            
+            Unique reference identifying the interchange.Created by the interchange sender.
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiMessageHeader.IsTestMessage">
+             <summary>
+             0035 Test indicator C n1
+            
+             1 Interchange is a test
+             Test indicator. 1 = test message. Empty = production message.
+             </summary>
+        </member>
+        <member name="F:EDI.DataAccess.Entities.MessageStatus.RECIEVED">
+            <summary>
+            Every Message we get over the web-interface should have this value
+            </summary>
+        </member>
+        <member name="F:EDI.DataAccess.Entities.DocType.EDIORDER">
+            <summary>
+            Every Message we get over the web-interface should have this value
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiOrder.DeliveryRecipient">
+            <summary>
+             0110 SG2 C 99 1 NAD-LOC
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiScheduleAgreement.PreviousDeliveryReferenceQualifier">
+             <summary>
+             0040 SG1 C 10 1 RFF-DTM - 0050 8 RFF M 1 1 Reference
+             C506 Reference M
+             1153 Reference qualifier M an..3 
+            
+             AIF Previous delivery instruction number
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiScheduleAgreement.PreviousDeliveryReferenceNumber">
+             <summary>
+             0040 SG1 C 10 1 RFF-DTM - 0050 8 RFF M 1 1 Reference
+             C506 Reference M
+             1154 Reference number C an..35
+            
+             Reference Number
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiScheduleAgreement.PreviousDeliveryReferenceDate">
+             <summary>
+             0040 SG1 C 10 1 RFF-DTM - 0050 8 RFF M 1 1 Reference
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiScheduleAgreement.CurrentDeliveryReferenceQualifier">
+             <summary>
+             0040 SG1 C 10 1 RFF-DTM - 0050 10 RFF M 1 1 Reference
+             C506 Reference M
+             1153 Reference qualifier M an..3 
+            
+             AAN Delivery schedule number
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiScheduleAgreement.CurrentDeliveryReferenceNumber">
+             <summary>
+             0040 SG1 C 10 1 RFF-DTM - 0050 10 RFF M 1 1 Reference
+             C506 Reference M
+             1154 Reference number C an..35
+            
+             Reference Number
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiScheduleAgreement.CurrentDeliveryReferenceDate">
+            <summary>
+            0040 SG1 C 10 1 RFF-DTM - 0060 11 DTM C 1 2 Date/time/period
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.EdiScheduleAgreement.Recipient">
+            <summary>
+             0140 SG4 C 500 1 NAD-LOC-SG8 - 0150 18 NAD M 1 1 Name and address
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.FinancialInstitution.PartyQualifier">
+             <summary>
+             0110 SG2 M 1 1 NAD-FII-SG3-SG5 -0140 13 FII M 5 2 Financial institution information
+            
+             3035 Party qualifier M an..3 M an..3 RB Receiving financial institution
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.FinancialInstitution.AccountHolderNumber">
+            <summary>
+            0110 SG2 M 1 1 NAD-FII-SG3-SG5 -0140 13 FII M 5 2 Financial institution information
+            C078 Account identification C
+            
+            3194 Account holder number C an..35 M an..35
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.FinancialInstitution.AccountHolderName">
+             <summary>
+             0110 SG2 M 1 1 NAD-FII-SG3-SG5 -0140 13 FII M 5 2 Financial institution information
+             C078 Account identification C
+            
+             3192 Account holder name C an..35
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.FinancialInstitution.InstitutionIdentification">
+            <summary>
+            0110 SG2 M 1 1 NAD-FII-SG3-SG5 -0140 13 FII M 5 2 Financial institution information
+            C088 Institution identification C
+            
+            3433 Institution name identification C an..11
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.FinancialInstitution.InstitutionBranchNumber">
+             <summary>
+             0110 SG2 M 1 1 NAD-FII-SG3-SG5 -0140 13 FII M 5 2 Financial institution information
+             C088 Institution identification C
+            
+             3434 Institution branch number C an..17
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.FinancialInstitution.InstitutionName">
+             <summary>
+             0110 SG2 M 1 1 NAD-FII-SG3-SG5 -0140 13 FII M 5 2 Financial institution information
+             C088 Institution identification C
+            
+             3432 Institution name C an..70
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.FinancialInstitution.CountryCode">
+             <summary>
+             0110 SG2 M 1 1 NAD-FII-SG3-SG5 -0140 13 FII M 5 2 Financial institution information
+            
+             3207 Country, coded C an..3
+             </summary>
+        </member>
+        <member name="T:EDI.DataAccess.Entities.LineItem">
+            <summary>
+            0940 21 LIN M 1 1 Line item
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.LineItemNumber">
+             <summary>
+             1082 Line item number C n..6
+            
+             Positon number of this article. The position number is needed as reference in the return receipts to KTM(e.g. dispatch advices)
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.ItemNumber">
+             <summary>
+             7140 Item number C an..35
+            
+             KTM's article number of this line item
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.ItemNumberType">
+             <summary>
+             7143 Item number type, coded C an..3
+            
+             BP Buyer's part number
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.AdditionalProductId">
+            <summary>
+            0950 22 PIA C 25 2 Additional product id - 4347 Product id. function qualifier M an..3
+            
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.AdditionalItemNumber">
+            <summary>
+            0950 22 PIA C 25 2 Additional product id - 7140 Item number C an..35
+            
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.AdditionalItemNumberType">
+            <summary>
+            0950 22 PIA C 25 2 Additional product id - 7143 Item number type, coded C an..3
+            
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.ItemDescriptionType">
+             <summary>
+             0960 23 IMD C 99 2 Item description - 7077 Item description type, coded C an..3
+            
+             Item description type, coded 
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.ItemCharacteristicCode">
+            <summary>
+            0960 23 IMD C 99 2 Item description - 7081 Item characteristic, coded C an..3
+            
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.ItemDescriptionIdentification">
+            <summary>
+            0960 23 IMD C 99 2 Item description - 7009 Item description identification C an..17
+            
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.CodeListQualifier">
+            <summary>
+            0960 23 IMD C 99 2 Item description - 1131 Code list qualifier C an..3
+            
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.CodeListResponsibleAgency">
+             <summary>
+             0960 23 IMD C 99 2 Item description - 3055 Code list responsible agency, coded C an..3
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.ItemDescription">
+             <summary>
+             0960 23 IMD C 99 2 Item description - 7008 Item description C an..35
+            
+             Free text description of the line item.
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.ReceivedDeliveryReferenceQualifier">
+            <summary>
+            0410 SG10 C 1 3 RFF-DTM - 0420 23 RFF M 1 3 Reference
+            C506 Reference M
+            1153 Reference qualifier M an..3 - ON Order number (purchase)
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.ReceivedDeliveryReferenceNumber">
+            <summary>
+            0410 SG10 C 1 3 RFF-DTM - 0420 23 RFF M 1 3 Reference
+            C506 Reference M
+            1154 Reference number C an..35 -Purchase order number of KTM
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.ReceivedDeliveryReferenceDate">
+            <summary>
+            0410 SG10 C 1 3 RFF-DTM - 0430 24 DTM C 1 4 Date/time/period
+            C507 Date/time/period M
+            
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.TextSubjectQualifier">
+             <summary>
+             1080 25 FTX C 99 - 4451 Text subject qualifier M an..3
+            
+             AAI General information
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.TextFunctionCode">
+             <summary>
+             1080 25 FTX C 99 - 4453 Text function, coded C an..3
+            
+             1 Text for subsequent use
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.FreeText">
+             <summary>
+             1080 25 FTX C 99 - 4440 Free text M an..70
+            
+             1 Text for subsequent use
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.MonetaryTypeQualifier">
+            <summary>
+            1030 SG26 M 1 2 MOA - 1040 36 MOA M 1 2 Monetary amount
+            C516 Monetary amount M 
+            5025 Monetary amount type qualifier M an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.MonetaryAmount">
+            <summary>
+            1030 SG26 M 1 2 MOA - 1040 36 MOA M 1 2 Monetary amount
+            C516 Monetary amount M 
+            5004 Monetary amount C n..18
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.MonetaryCurrency">
+            <summary>
+            1030 SG26 M 1 2 MOA - 1040 36 MOA M 1 2 Monetary amount
+            C516 Monetary amount M 
+            6345 Currency, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.PriceQualifier">
+             <summary>
+             1190 26 PRI M 1 2 Price details - 5125 Price qualifier M an..3
+            
+             AAA Calculation net
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.Price">
+             <summary>
+             1190 26 PRI M 1 2 Price details - 5118 Price C n..15
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.UnitPriceBasis">
+             <summary>
+             1190 26 PRI M 1 2 Price details - 5284 Unit price basis C n..9
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.PriceMeasureUnitQualifier">
+             <summary>
+             1190 26 PRI M 1 2 Price details - 6411 Measure unit qualifier C an..3
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.PurchaseReferenceQualifier">
+            <summary>
+            1160 SG29 M 1 2 RFF-DTM - 1170 38 RFF M 1 2 Reference
+            C506 Reference M
+            1153 Reference qualifier M an..3 - ON Order number (purchase)
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.PurchaseReferenceNumber">
+            <summary>
+            1160 SG29 M 1 2 RFF-DTM - 1170 38 RFF M 1 2 Reference
+            C506 Reference M
+            1154 Reference number C an..35 -Purchase order number of KTM
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.PurchaseLineNumber">
+            <summary>
+            1160 SG29 M 1 2 RFF-DTM - 1170 38 RFF M 1 2 Reference
+            C506 Reference M
+            1156 Line number C an..6 - Line number of referenced KTM purchase order line item
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.PurchaseDate">
+            <summary>
+            1160 SG29 M 1 2 RFF-DTM - 1180 39 DTM C 1 3 Date/time/period
+            C507 Date/time/period M
+            2005 Date/time/period qualifier M an..3 - 171 Reference date/time
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.DeliveryReferenceQualifier">
+            <summary>
+            1160 SG29 M 1 2 RFF-DTM - 1170 38 RFF M 1 2 Reference
+            C506 Reference M
+            1153 Reference qualifier M an..3 - ON Order number (purchase)
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.DeliveryReferenceNumber">
+            <summary>
+            1160 SG29 M 1 2 RFF-DTM - 1170 38 RFF M 1 2 Reference
+            C506 Reference M
+            1154 Reference number C an..35 -Purchase order number of KTM
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.DeliveryLineNumber">
+            <summary>
+            1160 SG29 M 1 2 RFF-DTM - 1170 38 RFF M 1 2 Reference
+            C506 Reference M
+            1156 Line number C an..6 - Line number of referenced KTM purchase order line item
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.DeliveryDate">
+            <summary>
+            1160 SG29 M 1 2 RFF-DTM - 1180 39 DTM C 1 3 Date/time/period
+            C507 Date/time/period M
+            2005 Date/time/period qualifier M an..3 - 171 Reference date/time
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.InvoiceDutyTaxFeeQualifier">
+            <summary>
+            1310 SG33 M 1 2 TAX-MOA - 1320 42 TAX M 1 2 Duty/tax/fee details
+            
+            5283 Duty/tax/fee function qualifier M an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.InvoiceTax">
+            <summary>
+            1310 SG33 M 1 2 TAX-MOA - 1320 42 TAX M 1 2 Duty/tax/fee details
+            C241 Duty/tax/fee type C
+            5153 Duty/tax/fee type, coded C an..3 VAT Value added tax
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.InvoiceDutyTaxFeeRate">
+            <summary>
+            1310 SG33 M 1 2 TAX-MOA - 1320 42 TAX M 1 2 Duty/tax/fee details
+            C243 Duty/tax/fee detail C
+            5278 Duty/tax/fee rate C an..17
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.TaxCategoryCode">
+            <summary>
+            1310 SG33 M 1 2 TAX-MOA - 1320 42 TAX M 1 2 Duty/tax/fee details
+            
+            5305 Duty/tax/fee category, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.TaxMonetaryTypeQualifier">
+            <summary>
+            1310 SG33 M 1 2 TAX-MOA - 1330 43 MOA M 1 3 Monetary amount
+            C516 Monetary amount M 
+            5025 Monetary amount type qualifier M an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.TaxMonetaryAmount">
+            <summary>
+            1310 SG33 M 1 2 TAX-MOA - 1330 43 MOA M 1 3 Monetary amount
+            C516 Monetary amount M 
+            5004 Monetary amount C n..18
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.LineItem.TaxMonetaryCurrency">
+            <summary>
+            1310 SG33 M 1 2 TAX-MOA - 1330 43 MOA M 1 3 Monetary amount
+            C516 Monetary amount M 
+            6345 Currency, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.NameAndAddress.PartyQualifier">
+            <summary>
+            3035 Party qualifier M an..3 M an..3
+            
+            BY Buyer
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.NameAndAddress.PartyId">
+             <summary>
+             C082 Party identification details C  - 3039 Party id. identification M an..35
+            
+             Buyer organisation number assigned by KTM. You can find
+             the list here: https://ecosio.com/ktm/
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.NameAndAddress.Contact">
+            <summary>
+            0210 SG5 C 5 2 CTA-COM
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.NameAndAddress.ResponsibleAgency">
+            <summary>
+            
+            C082 Party identification details C  3055 Code list responsible agency,coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.NameAndAddress.CompanyName">
+            <summary>
+            
+            C080 Party name C  3036 Party name M an..35
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.NameAndAddress.Street">
+            <summary>
+            
+            C059 Street C  3042 Street and number/p.o. box M an..35
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.NameAndAddress.CityName">
+            <summary>
+            
+            3164 City name
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.NameAndAddress.Postcode">
+            <summary>
+            
+            3251 Postcode identification
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.NameAndAddress.CountryCode">
+            <summary>
+            
+            33207 Country, coded C an..3
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.NameAndAddress.Location">
+            <summary>
+            0110 SG2 C 99 1 NAD-LOC
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.NameAndAddress.VATRegistrationNumber">
+            <summary>
+            0150 SG3 D 9999 2 RFF
+            
+            0160 14 RFF M 1 2 Reference
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.PaymentTerm.TypeQualifier">
+             <summary>
+             0330 PAT Payment terms basis
+             4279 Payment terms type qualifier M an..3
+            
+             22 Discount
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.PaymentTerm.TimeReferenceCode">
+             <summary>
+             C112 Terms/time information C - 2475 Payment time reference, coded M an..3
+            
+             5 Date of invoice
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.PaymentTerm.TimeRelationCode">
+             <summary>
+             C112 Terms/time information C - 2009 Time relation, coded C an..3
+            
+             3 After reference
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.PaymentTerm.TypeOfPeriod">
+             <summary>
+             C112 Terms/time information C - 2151 Type of period, coded C an..3
+            
+             D Day
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.PaymentTerm.NumberOfPeriod">
+             <summary>
+             C112 Terms/time information C - 2152 Number of periods C n..3
+            
+             Number of periods (e.g. days) of the type indicated in data element 2151
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.PaymentTerm.PercentageQualifier">
+             <summary>
+             0350 18 PCD C 1 2 Percentage details
+             C501 Percentage details M - 5245 Percentage qualifier M an..3
+            
+             Discount
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.PaymentTerm.Percentage">
+             <summary>
+             0350 18 PCD C 1 2 Percentage details
+             C501 Percentage details M - 5482 Percentage C n..10
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.PlaceLocation.PlaceLocationQualifier">
+             <summary>
+             0440 20 LOC C 2 2 Place/location identification - 3227 Place/location qualifier M an..3
+            
+             1 Place of terms of delivery
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.PlaceLocation.PlaceLocationIdentification">
+             <summary>
+             0440 20 LOC C 2 2 Place/location identification - 3225 Place/location identification C an..25
+            
+             
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.Quantity.QuantityQualifier">
+             <summary>
+             0980 24 QTY C 10 2 Quantity - 6063 Quantity qualifier M an..3
+            
+             21 Ordered quantity
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.Quantity.ItemQuantity">
+             <summary>
+             0980 24 QTY C 10 2 Quantity - 6060 Quantity M n..15
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.Quantity.QTYMeasureUnitQualifier">
+             <summary>
+             0980 24 QTY C 10 2 Quantity - 6411 Measure unit qualifier C an..3
+            
+             Code specifying the unit of measurement, use UN/ECE
+             Recommendation 20, Common code.
+                 PCE Piece
+                 MTR Metre*
+                 KGM Kilogram*
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.ScheduleCondition.DeliveryPlanStatusIndicatorCode">
+             <summary>
+             1920 SG49 C 100 2 SCC-SG50 -1930 27 SCC M 1 2 Scheduling conditions
+            
+             1 Firm Planned quantity - is always 1.
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.ScheduleCondition.Quantity">
+            <summary>
+            1960 SG50 C 10 3 QTY-DTM -1960 SG50 C 10 3 QTY-DTM
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.ScheduleCondition.DeliveryDate">
+             <summary>
+             1960 SG50 C 10 3 QTY-DTM
+             1980 29 DTM C 5 4 Date/time/period
+            
+             </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.ScheduleCondition.EarliestDate">
+            <summary>
+            0470 SG12 C 200 3 QTY-SCC-DTM - 0500 31 DTM D 2 4 Date/time/period
+            C507 Date/time/period M 
+            2005 Date/time/period qualifier M an..3 
+            </summary>
+        </member>
+        <member name="P:EDI.DataAccess.Entities.ScheduleCondition.LatestDate">
+            <summary>
+            0470 SG12 C 200 3 QTY-SCC-DTM - 0500 31 DTM D 2 4 Date/time/period
+            C507 Date/time/period M 
+            2005 Date/time/period qualifier M an..3 
+            </summary>
+        </member>
+    </members>
+</doc>

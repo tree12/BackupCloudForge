@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>5e5d5aab-4e58-4724-8304-c365521b7932</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Common</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\CTTuple.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\ObjectCache.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\WaitCollector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\ArrayExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\BoolExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\CollectionExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\ColorExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\DateTimeExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\DictionaryExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\ExceptionExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\FloatExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\FunctionalExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\IntExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\ListExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\NotNullable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\ObjectExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\Singleton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\StreamExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\StringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extension\TypeExtensions.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+﻿C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm  \Users\atom\Dev\C#\Aigner\ActiveX\ActiveX\bin\Debug\ActiveX.dll /codebase /tlb
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm c:\temp\ActiveX.dll /codebase /tlb
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\regasm ActiveX.dll /codebase /tlb
+
+Offline install .net 4.6
+https://www.microsoft.com/de-de/download/details.aspx?id=48137
+
+Online install .net 4.6
+https://www.microsoft.com/de-DE/download/confirmation.aspx?id=53345
+
+Regasm
+C:\Windows\Microsoft.NET\Framework\v4.0.30319

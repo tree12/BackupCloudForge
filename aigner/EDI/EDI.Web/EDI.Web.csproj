@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <UserSecretsId>da806122-9441-4ce0-8e40-ae93b0b3f555</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.13" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="5.0.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EDI.DataAccess\EDI.DataAccess.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,77 @@
+﻿@using System.IO
+@using System.Security.AccessControl
+@using BedarfsCheck.Controllers
+@using BedarfsCheck.Data
+@using Microsoft.AspNetCore.Routing
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    @ViewContext.RouteData.Values["controller"]
+*@
+@{
+    List<InsuranceData> insuranceList = Model;
+}
+@{
+    bool foundAny=false;
+    string firstElementId=null;
+}
+
+@foreach (InsuranceData insurance in insuranceList.OrderByDescending(_ => _.Level))
+{
+    firstElementId = insurance.Name_PK;
+    <table id="results_@insurance.Name_PK" class="result_table" style="width: 100%">
+        <thead class="results resultheader">
+        <tr>
+            <th id="results1_@insurance.Name_PK" class="results result_table" style="width: 100%">
+                <div style="height: 30px; text-align: start; line-height: 30px; vert-align: middle; border: solid bisque 2px; border-radius: 6px; background-color: beige; font-size: larger">
+                    <div style="margin-left: 10px;width: 100%">@insurance.Description
+                        <img style="align-self: right; float: right; width: 180px; height: 30px" src="@Url.Content($"~/pic/stars_{Math.Max(0, Math.Min(5, insurance.Level))}.png")"/>
+                    </div>
+                    
+                </div>                
+            </th>
+            
+        </tr>
+        </thead>
+        <tr>
+            <td style="padding-left: 50px">
+                @Html.Raw(insurance.HtmlText)
+                @*Html.Partial("/insurance/" + insurance.Name_PK + ".html")*@
+            </td>
+        </tr>
+    </table>
+    foundAny = true;    
+}
+
+@if(!foundAny)
+{
+    <div class="error">Keine Versicherungen gefunden!</div>
+}
+
+<script>
+    /*Ü
+    function mouseEnter(id) {        
+        $("#results1_"+id).addClass("result_table_over");
+        $("#results1_" + id).removeClass("result_table");
+        $("#results1_" + id).css("display", "none");
+        alert($("#results1_" + id).id);
+
+
+    };
+
+    $(document).on("mouseenter",
+        ".resultheader",
+        function(elem) {
+            alert(elem);
+        });*/
+    
+                 
+    $("html, body").animate({
+            scrollTop: $("#result").offset().top
+    }, 2000);    
+
+
+</script>
+
+
+

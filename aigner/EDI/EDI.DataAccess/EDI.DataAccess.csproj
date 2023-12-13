@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="EDIFACT\**" />
+    <EmbeddedResource Remove="EDIFACT\**" />
+    <None Remove="EDIFACT\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Entities\Contact.cs" />
+    <Compile Remove="Entities\DeliveryOrTransportTerm.cs" />
+    <Compile Remove="Entities\EdiMessageHeader.cs" />
+    <Compile Remove="Entities\EdiOrderChange.cs" />
+    <Compile Remove="Entities\FinancialInstitution.cs" />
+    <Compile Remove="Entities\Interfaces\IEDIMessage.cs" />
+    <Compile Remove="Entities\Interfaces\IEdiMessageHeader.cs" />
+    <Compile Remove="Entities\Interfaces\IEdiOrder.cs" />
+    <Compile Remove="Entities\Interfaces\IInvoicee.cs" />
+    <Compile Remove="Entities\Interfaces\ISeller.cs" />
+    <Compile Remove="Entities\LineItem.cs" />
+    <Compile Remove="Entities\LineItemChange.cs" />
+    <Compile Remove="Entities\NameAndAddress.cs" />
+    <Compile Remove="Entities\PaymentTerm.cs" />
+    <Compile Remove="Entities\PlaceLocation.cs" />
+    <Compile Remove="Entities\Quantity.cs" />
+    <Compile Remove="Entities\ScheduleCondition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EdiFabric" Version="10.6.7" />
+    <PackageReference Include="EdiFabric.Templates.Edifact" Version="2.7.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\IT42\Portal42\Portal.Common.Entity\Portal.Common.Entity.csproj" />
+  </ItemGroup>
+</Project>

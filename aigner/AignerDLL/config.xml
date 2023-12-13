@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <MSSQL>
+  <!--Server, zb.: localhost\sqlexpress-->
+    <Server>localhost\sqlexpress</Server>
+    <DB-Name>AignerSQL</DB-Name>
+  </MSSQL>
+  <Data-Dir>Data</Data-Dir>
+  <Exchange>
+    <!--
+    <User>antth</User>
+    <Password>TomCat</Password>
+    <Domain>CrazyTeam</Domain>
+    <URL>https://ctatwes05.crazyteam.local/ews/Exchange.asmx</URL>-->
+    <User>Thomas</User>
+    <Password>aTom+78</Password>
+    <Domain>Aigner</Domain>
+    <URL>https://mail.aigner.at/ews/Exchange.asmx</URL>
+  </Exchange>
+</config>

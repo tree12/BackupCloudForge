@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiveX", "ActiveX\ActiveX.csproj", "{57C8C538-26CB-439C-B70B-D9A754C428B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "TestForm\TestForm.csproj", "{D578DFFD-74E3-48C6-94E8-5C574395D83D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AignerDLL", "..\AignerDLL\AignerDLL.csproj", "{B4A955E9-C85D-4465-AE03-B0D7C484D289}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{82299B42-B151-4983-B1E7-F2D779C6B32E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterControl", "RegisterControl\RegisterControl.csproj", "{59CD7881-EB55-4A96-ADC1-C598B48B8D7B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Common Basic", "..\..\ATom\Common\Common Basic.shproj", "{5E5D5AAB-4E58-4724-8304-C365521B7932}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\ATom\Common\Common.projitems*{57c8c538-26cb-439c-b70b-d9a754c428b0}*SharedItemsImports = 4
+		..\..\ATom\Common\Common.projitems*{5e5d5aab-4e58-4724-8304-c365521b7932}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57C8C538-26CB-439C-B70B-D9A754C428B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57C8C538-26CB-439C-B70B-D9A754C428B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57C8C538-26CB-439C-B70B-D9A754C428B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57C8C538-26CB-439C-B70B-D9A754C428B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D578DFFD-74E3-48C6-94E8-5C574395D83D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D578DFFD-74E3-48C6-94E8-5C574395D83D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D578DFFD-74E3-48C6-94E8-5C574395D83D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D578DFFD-74E3-48C6-94E8-5C574395D83D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4A955E9-C85D-4465-AE03-B0D7C484D289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A955E9-C85D-4465-AE03-B0D7C484D289}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A955E9-C85D-4465-AE03-B0D7C484D289}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A955E9-C85D-4465-AE03-B0D7C484D289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82299B42-B151-4983-B1E7-F2D779C6B32E}.Debug|Any CPU.ActiveCfg = Debug
+		{82299B42-B151-4983-B1E7-F2D779C6B32E}.Release|Any CPU.ActiveCfg = Release
+		{59CD7881-EB55-4A96-ADC1-C598B48B8D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59CD7881-EB55-4A96-ADC1-C598B48B8D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59CD7881-EB55-4A96-ADC1-C598B48B8D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59CD7881-EB55-4A96-ADC1-C598B48B8D7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68FF7504-211C-4EB1-9259-49B04495A6C9}
+	EndGlobalSection
+EndGlobal
