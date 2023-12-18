@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace EDI.DataAccess.Entities
 {
-    public class EdiOrderConfirmation : EdiOrderBase<EdiOrderConfirmation>, ISupplierContact, IFreeText
+    public class EdiOrderConfirmation : EdiOrderBase<EdiOrderConfirmation>, ISupplierContact//, IFreeText
     {
         public string Supplier_ContactCode { get; set; }
 
@@ -43,7 +43,7 @@ namespace EDI.DataAccess.Entities
             base.init(tsordrsp.BGM);
             base.init(tsordrsp.UNH);
             if (tsordrsp.FTX != null)
-                base.init(tsordrsp.FTX[0]);
+                base.init(tsordrsp.FTX);
             base.init(tsordrsp.UNT);
 
             if (tsordrsp.CUXLoop != null)
@@ -281,11 +281,10 @@ namespace EDI.DataAccess.Entities
             result.DTM = new List<DTM>();
             result.DTM.Add(base.generateDocumentDTM());
 
-            var ftx = base.generateFTX();
-            if (ftx != null)
+            var ftxs = base.generateFTX();
+            if (ftxs != null && ftxs.Any())
             {
-                result.FTX = new List<FTX>();
-                result.FTX.Add(ftx);
+                result.FTX = ftxs;
             }
 
             //result.RFFLoop = new List<Loop_RFF_ORDRSP>();
