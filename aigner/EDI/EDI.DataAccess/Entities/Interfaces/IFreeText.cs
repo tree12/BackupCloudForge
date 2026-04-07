@@ -18,11 +18,7 @@ namespace EDI.DataAccess.Entities.Interfaces
         public string FreeText3 { get; set; }
         public string FreeText4 { get; set; }
         public string FreeText5 { get; set; }
-        public string FreeText6 { get; set; }
-        public string FreeText7 { get; set; }
-        public string FreeText8 { get; set; }
-        public string FreeText9 { get; set; }
-        public string FreeText10 { get; set; }
+
 
         public void init(List<FTX> ftxs);
         public List<FTX> generateFTX();

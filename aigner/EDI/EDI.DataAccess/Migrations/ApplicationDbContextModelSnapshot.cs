@@ -18,7 +18,7 @@ namespace EDI.DataAccess.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasDefaultSchema("dbo")
-                .HasAnnotation("ProductVersion", "7.0.14")
+                .HasAnnotation("ProductVersion", "5.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -41,7 +41,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -87,7 +87,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -133,7 +133,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -179,7 +179,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -225,7 +225,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -271,7 +271,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -317,7 +317,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -363,7 +363,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -409,7 +409,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -455,7 +455,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -501,7 +501,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -547,7 +547,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -596,7 +596,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -642,7 +642,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -688,7 +688,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -734,7 +734,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -780,7 +780,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -826,7 +826,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -872,7 +872,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -918,7 +918,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -964,7 +964,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1010,7 +1010,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1056,7 +1056,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1102,7 +1102,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1148,7 +1148,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1194,7 +1194,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1240,7 +1240,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1286,7 +1286,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1332,7 +1332,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1378,7 +1378,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1424,7 +1424,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1470,7 +1470,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1516,7 +1516,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1562,7 +1562,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1608,7 +1608,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1654,7 +1654,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -1700,7 +1700,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("German")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("InUse")
                         .HasColumnType("bit");
@@ -2435,9 +2435,6 @@ namespace EDI.DataAccess.Migrations
                     b.Property<string>("FreeText1")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FreeText10")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("FreeText2")
                         .HasColumnType("nvarchar(max)");
 
@@ -2448,18 +2445,6 @@ namespace EDI.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FreeText5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FreeText6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FreeText7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FreeText8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FreeText9")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FreeTextFreeTextCoded")
@@ -2764,7 +2749,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("TermsOfDeliveryIncoterms")
                         .HasMaxLength(5)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(5)");
 
                     b.Property<string>("TermsOfDeliveryPlaceLocationIdentification")
                         .HasColumnType("nvarchar(max)");
@@ -2897,9 +2882,6 @@ namespace EDI.DataAccess.Migrations
                     b.Property<string>("FreeText1")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FreeText10")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("FreeText2")
                         .HasColumnType("nvarchar(max)");
 
@@ -2910,18 +2892,6 @@ namespace EDI.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FreeText5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FreeText6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FreeText7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FreeText8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FreeText9")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FreeTextFreeTextCoded")
@@ -3127,7 +3097,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("TermsOfDeliveryIncoterms")
                         .HasMaxLength(5)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(5)");
 
                     b.Property<string>("TermsOfDeliveryPlaceLocationIdentification")
                         .HasColumnType("nvarchar(max)");
@@ -3254,9 +3224,6 @@ namespace EDI.DataAccess.Migrations
                     b.Property<string>("FreeText1")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FreeText10")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("FreeText2")
                         .HasColumnType("nvarchar(max)");
 
@@ -3267,18 +3234,6 @@ namespace EDI.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FreeText5")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FreeText6")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FreeText7")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FreeText8")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FreeText9")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FreeTextFreeTextCoded")
@@ -3478,7 +3433,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.Property<string>("TermsOfDeliveryIncoterms")
                         .HasMaxLength(5)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(5)");
 
                     b.Property<string>("TermsOfDeliveryPlaceLocationIdentification")
                         .HasColumnType("nvarchar(max)");

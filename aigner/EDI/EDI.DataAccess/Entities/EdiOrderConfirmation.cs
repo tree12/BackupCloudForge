@@ -131,7 +131,7 @@ namespace EDI.DataAccess.Entities
             {
 
                 base.initNADDP(partyDelivery.NAD);
-                this.DPLoc(partyDelivery.LOC.FirstOrDefault());
+                base.DPLoc(partyDelivery.LOC.FirstOrDefault());
                 if (partyDelivery.LOC.Count > 1) AddEdiConvertError("We found more than 1 Delivery Location");
 
             }
@@ -249,8 +249,10 @@ namespace EDI.DataAccess.Entities
         {
             CTA cta = new CTA();
             cta.Contactfunctioncoded_01 = Supplier_ContactCode;
-            cta.DEPARTMENTOREMPLOYEEDETAILS_02 = new C056();
-            cta.DEPARTMENTOREMPLOYEEDETAILS_02.Departmentoremployee_02 = Supplier_Name;
+            if (!string.IsNullOrEmpty(Supplier_Name)) {
+                cta.DEPARTMENTOREMPLOYEEDETAILS_02 = new C056();
+                cta.DEPARTMENTOREMPLOYEEDETAILS_02.Departmentoremployee_02 = Supplier_Name;
+            }         
             return cta;
         }
 
@@ -323,6 +325,25 @@ namespace EDI.DataAccess.Entities
             #region Supplier
             var nadLoopSU = new Loop_NAD_ORDRSP();
             nadLoopSU.NAD = base.generateSupplier();
+
+            if (!string.IsNullOrEmpty(Supplier_ContactCode) || !string.IsNullOrEmpty(Supplier_Email) || !string.IsNullOrEmpty(Supplier_Phone))
+            {
+                nadLoopSU.CTALoop = new List<Loop_CTA_ORDRSP>();
+                Loop_CTA_ORDRSP loop_CTA_ORDRSP = new Loop_CTA_ORDRSP();
+                if (!string.IsNullOrEmpty(Supplier_ContactCode)) 
+                    loop_CTA_ORDRSP.CTA = this.generateSupplierCTA();
+                if (!string.IsNullOrEmpty(Supplier_Email) || !string.IsNullOrEmpty(Supplier_Phone)) {
+                    loop_CTA_ORDRSP.COM = new List<COM>();
+                    if(!string.IsNullOrEmpty(Supplier_Email))
+                        loop_CTA_ORDRSP.COM.Add(this.generateSupplierEmail());
+                    if (!string.IsNullOrEmpty(Supplier_Phone))
+                        loop_CTA_ORDRSP.COM.Add(this.generateSupplierPhone());
+                }
+
+                nadLoopSU.CTALoop.Add(loop_CTA_ORDRSP);
+
+            }
+
             result.NADLoop.Add(nadLoopSU);
 
             #endregion

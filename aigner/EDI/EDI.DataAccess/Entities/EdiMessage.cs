@@ -99,11 +99,7 @@ namespace EDI.DataAccess.Entities
         public string FreeText3 { get; set; }
         public string FreeText4 { get; set; }
         public string FreeText5 { get; set; }
-        public string FreeText6 { get; set; }
-        public string FreeText7 { get; set; }
-        public string FreeText8 { get; set; }
-        public string FreeText9 { get; set; }
-        public string FreeText10 { get; set; }
+
 
 
         #endregion
@@ -371,7 +367,7 @@ namespace EDI.DataAccess.Entities
             //    ftx.TEXTLITERAL_04.Freetext_05 = FreeText5;
             //    return ftx;
             //}
-            for (int index = 0; index < 10; index++) {
+            for (int index = 0; index < 5; index++) {
                 if (!string.IsNullOrEmpty(FreeTextTextSubjectQualifier))
                 {
                     var ftx = new FTX();
@@ -380,13 +376,14 @@ namespace EDI.DataAccess.Entities
                     ftx.TEXTREFERENCE_03 = new C107();
                     ftx.TEXTREFERENCE_03.Freetextcoded_01 = FreeTextFreeTextCoded;
                     PropertyInfo text = this.GetType().GetProperty($"FreeText{index + 1}"); 
-                    if (text != null) {
+                    if (text != null && text.GetValue(this) !=null) {
                         ftx.TEXTLITERAL_04 = new C108();
                         ftx.TEXTLITERAL_04.GenC108FromText(text.GetValue(this).ToString());
+                        ftxs.Add(ftx);
                     }
 
 
-                    ftxs.Add(ftx);
+                    
                 }
 
             }
