@@ -306,15 +306,6 @@ namespace EDI.Web.Controllers
                     target.init((TSINVOIC)ediMessage);
                     return target;
                 }
-                //else if (typeof(TSORDCHG) == ediMessage.GetType())
-                //{
-                //    var tsordchgs = ediItems.OfType<TSORDCHG>();
-                //    var target = new EdiOrderChange();
-
-                //    target.init(unb);
-                //    target.init((TSORDCHG)ediMessage);
-                //    return target;
-                //}
                 else if (typeof(TSDELFOR) == ediMessage.GetType())
                 {
                     var target = new EdiScheduleAgreement();

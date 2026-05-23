@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using EDI.DataAccess.Entities.Interfaces;
@@ -98,6 +99,7 @@ namespace EDI.DataAccess.Entities
         public string FreeText3 { get; set; }
         public string FreeText4 { get; set; }
         public string FreeText5 { get; set; }
+
 
 
         #endregion
@@ -316,41 +318,78 @@ namespace EDI.DataAccess.Entities
             return cux;
         }
 
-        public void init(FTX ftx)
+        public void init(List<FTX> ftxs)
         {
-            if (ftx != null)
+          for(int index = 0; index < ftxs.Count; index++)
             {
-                FreeTextTextSubjectQualifier = ftx.Textsubjectqualifier_01;
-                FreeTextFreeTextCoded = ftx.TEXTREFERENCE_03?.Freetextcoded_01;
-                //CodeListQualifier = ftx.TEXTREFERENCE_03?.Codelistqualifier_02;
-                FreeText1 = ftx.TEXTLITERAL_04?.Freetext_01;
-                FreeText2 = ftx.TEXTLITERAL_04?.Freetext_02;
-                FreeText3 = ftx.TEXTLITERAL_04?.Freetext_03;
-                FreeText4 = ftx.TEXTLITERAL_04?.Freetext_04;
-                FreeText5 = ftx.TEXTLITERAL_04?.Freetext_05;
+                var ftx = ftxs[index];
+                if (ftx != null)
+                {
+                    FreeTextTextSubjectQualifier = ftx.Textsubjectqualifier_01;
+                    FreeTextFreeTextCoded = ftx.TEXTREFERENCE_03?.Freetextcoded_01;
+                    //CodeListQualifier = ftx.TEXTREFERENCE_03?.Codelistqualifier_02;
+                    //FreeText1 = ftx.TEXTLITERAL_04?.Freetext_01;
+                    //FreeText2 = ftx.TEXTLITERAL_04?.Freetext_02;
+                    //FreeText3 = ftx.TEXTLITERAL_04?.Freetext_03;
+                    //FreeText4 = ftx.TEXTLITERAL_04?.Freetext_04;
+                    //FreeText5 = ftx.TEXTLITERAL_04?.Freetext_05;
+
+                    //        if (ftx != null)
+                    //        {
+                    //            ++index;
+                   
+                    PropertyInfo text = this.GetType().GetProperty($"FreeText{index+1}");
+                    if (text != null)
+                        text.SetValue(this, ftx.TEXTLITERAL_04.GenStringFromC108());
+
+                    //        }
+                }
             }
+          
 
         }
 
-        public FTX generateFTX()
+        public List<FTX> generateFTX()
         {
-            if (!string.IsNullOrEmpty(FreeTextTextSubjectQualifier))
-            {
-                var ftx = new FTX();
-                ftx.Textsubjectqualifier_01 = FreeTextTextSubjectQualifier;
-                //ftx.Textfunctioncoded_02 = "1";//Comment because it use in order change and order.
-                ftx.TEXTREFERENCE_03 = new C107();
-                ftx.TEXTREFERENCE_03.Freetextcoded_01 = FreeTextFreeTextCoded;
-                ftx.TEXTLITERAL_04 = new C108();
-                ftx.TEXTLITERAL_04.Freetext_01 = FreeText1;
-                ftx.TEXTLITERAL_04.Freetext_02 = FreeText2;
-                ftx.TEXTLITERAL_04.Freetext_03 = FreeText3;
-                ftx.TEXTLITERAL_04.Freetext_04 = FreeText4;
-                ftx.TEXTLITERAL_04.Freetext_05 = FreeText5;
-                return ftx;
-            }
+            List<FTX> ftxs = new List <FTX>();
+            //if (!string.IsNullOrEmpty(FreeTextTextSubjectQualifier))
+            //{
+            //    var ftx = new FTX();
+            //    ftx.Textsubjectqualifier_01 = FreeTextTextSubjectQualifier;
+            //    //ftx.Textfunctioncoded_02 = "1";//Comment because it use in order change and order.
+            //    ftx.TEXTREFERENCE_03 = new C107();
+            //    ftx.TEXTREFERENCE_03.Freetextcoded_01 = FreeTextFreeTextCoded;
+            //    ftx.TEXTLITERAL_04 = new C108();
+            //    ftx.TEXTLITERAL_04.Freetext_01 = FreeText1;
+            //    ftx.TEXTLITERAL_04.Freetext_02 = FreeText2;
+            //    ftx.TEXTLITERAL_04.Freetext_03 = FreeText3;
+            //    ftx.TEXTLITERAL_04.Freetext_04 = FreeText4;
+            //    ftx.TEXTLITERAL_04.Freetext_05 = FreeText5;
+            //    return ftx;
+            //}
+            for (int index = 0; index < 5; index++) {
+                if (!string.IsNullOrEmpty(FreeTextTextSubjectQualifier))
+                {
+                    var ftx = new FTX();
+                    ftx.Textsubjectqualifier_01 = FreeTextTextSubjectQualifier;
+                    //ftx.Textfunctioncoded_02 = "1";//Comment because it use in order change and order.
+                    ftx.TEXTREFERENCE_03 = new C107();
+                    ftx.TEXTREFERENCE_03.Freetextcoded_01 = FreeTextFreeTextCoded;
+                    PropertyInfo text = this.GetType().GetProperty($"FreeText{index + 1}"); 
+                    if (text != null && text.GetValue(this) !=null) {
+                        ftx.TEXTLITERAL_04 = new C108();
+                        ftx.TEXTLITERAL_04.GenC108FromText(text.GetValue(this).ToString());
+                        ftxs.Add(ftx);
+                    }
 
-            return null;
+
+                    
+                }
+
+            }
+              
+
+            return ftxs;
         }
     }
 }

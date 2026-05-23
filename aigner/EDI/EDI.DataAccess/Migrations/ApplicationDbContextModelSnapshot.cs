@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
+#nullable disable
+
 namespace EDI.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
@@ -16,9 +18,10 @@ namespace EDI.DataAccess.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasDefaultSchema("dbo")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.3")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeActionRequest", b =>
                 {
@@ -63,7 +66,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeActionRequest");
+                    b.ToTable("CodeActionRequest", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeAllowanceOrChargeCodeQualifier", b =>
@@ -109,7 +112,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeAllowanceOrChargeCodeQualifier");
+                    b.ToTable("CodeAllowanceOrChargeCodeQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeContactFunctionCode", b =>
@@ -155,7 +158,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeContactFunctionCode");
+                    b.ToTable("CodeContactFunctionCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeDateTimePeriodFormatCode", b =>
@@ -201,7 +204,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeDateTimePeriodFormatCode");
+                    b.ToTable("CodeDateTimePeriodFormatCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeDateTimePeriodFunctionCodeQualifier", b =>
@@ -247,7 +250,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeDateTimePeriodFunctionCodeQualifier");
+                    b.ToTable("CodeDateTimePeriodFunctionCodeQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeDeliveryPlanStatusIndicator", b =>
@@ -293,7 +296,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeDeliveryPlanStatusIndicator");
+                    b.ToTable("CodeDeliveryPlanStatusIndicator", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeDescriptionFormatCode", b =>
@@ -339,7 +342,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeDescriptionFormatCode");
+                    b.ToTable("CodeDescriptionFormatCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeDocumentName", b =>
@@ -385,7 +388,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeDocumentName");
+                    b.ToTable("CodeDocumentName", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeDutyTaxFeeCategoryCode", b =>
@@ -431,7 +434,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeDutyTaxFeeCategoryCode");
+                    b.ToTable("CodeDutyTaxFeeCategoryCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeDutyTaxFeeFunctionCodeQualifier", b =>
@@ -477,7 +480,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeDutyTaxFeeFunctionCodeQualifier");
+                    b.ToTable("CodeDutyTaxFeeFunctionCodeQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeDutyTaxFeeTypeNameCode", b =>
@@ -523,7 +526,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeDutyTaxFeeTypeNameCode");
+                    b.ToTable("CodeDutyTaxFeeTypeNameCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeFreeTextCode", b =>
@@ -572,7 +575,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeFreeTextCode");
+                    b.ToTable("CodeFreeTextCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeIncotermCode", b =>
@@ -618,7 +621,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeIncotermCode");
+                    b.ToTable("CodeIncotermCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeItemCaracteristic", b =>
@@ -664,7 +667,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeItemCaracteristic");
+                    b.ToTable("CodeItemCaracteristic", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeItemDescriptionType", b =>
@@ -710,7 +713,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeItemDescriptionType");
+                    b.ToTable("CodeItemDescriptionType", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeItemTypeIdentificationCode", b =>
@@ -756,7 +759,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeItemTypeIdentificationCode");
+                    b.ToTable("CodeItemTypeIdentificationCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeListQualifierCode", b =>
@@ -802,7 +805,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeListQualifierCode");
+                    b.ToTable("CodeListQualifierCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeListResponsibleAgencyCode", b =>
@@ -848,7 +851,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeListResponsibleAgencyCode");
+                    b.ToTable("CodeListResponsibleAgencyCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeLocationFunctionCodeQualifier", b =>
@@ -894,7 +897,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeLocationFunctionCodeQualifier");
+                    b.ToTable("CodeLocationFunctionCodeQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeMessageFunction", b =>
@@ -940,7 +943,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeMessageFunction");
+                    b.ToTable("CodeMessageFunction", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeMonetaryAmountTypeCodeQualifier", b =>
@@ -986,7 +989,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeMonetaryAmountTypeCodeQualifier");
+                    b.ToTable("CodeMonetaryAmountTypeCodeQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodePartyQualifier", b =>
@@ -1032,7 +1035,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodePartyQualifier");
+                    b.ToTable("CodePartyQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodePaymentTermsDescriptionIdentifier", b =>
@@ -1078,7 +1081,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodePaymentTermsDescriptionIdentifier");
+                    b.ToTable("CodePaymentTermsDescriptionIdentifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodePaymentTermsTypeCodeQualifier", b =>
@@ -1124,7 +1127,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodePaymentTermsTypeCodeQualifier");
+                    b.ToTable("CodePaymentTermsTypeCodeQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodePercentageTypeCodeQualifier", b =>
@@ -1170,7 +1173,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodePercentageTypeCodeQualifier");
+                    b.ToTable("CodePercentageTypeCodeQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodePriceCodeQualifier", b =>
@@ -1216,7 +1219,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodePriceCodeQualifier");
+                    b.ToTable("CodePriceCodeQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeProductIdFunctionQualifier", b =>
@@ -1262,7 +1265,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeProductIdFunctionQualifier");
+                    b.ToTable("CodeProductIdFunctionQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeQuantityTypeCodeQualifier", b =>
@@ -1308,7 +1311,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeQuantityTypeCodeQualifier");
+                    b.ToTable("CodeQuantityTypeCodeQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeReferenceCodeQualifier", b =>
@@ -1354,7 +1357,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeReferenceCodeQualifier");
+                    b.ToTable("CodeReferenceCodeQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeSpecialServicedescriptionCode", b =>
@@ -1400,7 +1403,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeSpecialServicedescriptionCode");
+                    b.ToTable("CodeSpecialServicedescriptionCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeTermsOfDeliveryOrTransportFunctionCode", b =>
@@ -1446,7 +1449,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeTermsOfDeliveryOrTransportFunctionCode");
+                    b.ToTable("CodeTermsOfDeliveryOrTransportFunctionCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeTermsOfPaymentIdentification", b =>
@@ -1492,7 +1495,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeTermsOfPaymentIdentification");
+                    b.ToTable("CodeTermsOfPaymentIdentification", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeTextFunctionCode", b =>
@@ -1538,7 +1541,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeTextFunctionCode");
+                    b.ToTable("CodeTextFunctionCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeTextSubjectCodeQualifier", b =>
@@ -1584,7 +1587,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeTextSubjectCodeQualifier");
+                    b.ToTable("CodeTextSubjectCodeQualifier", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeTimeReferenceCode", b =>
@@ -1630,7 +1633,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeTimeReferenceCode");
+                    b.ToTable("CodeTimeReferenceCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeTimeRelationCode", b =>
@@ -1676,7 +1679,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeTimeRelationCode");
+                    b.ToTable("CodeTimeRelationCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.Codes.CodeTypePeriodCode", b =>
@@ -1722,15 +1725,16 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CodeTypePeriodCode");
+                    b.ToTable("CodeTypePeriodCode", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.EdiDeliveryNote", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("AWFirstIdentityNumber1")
                         .HasColumnType("nvarchar(max)");
@@ -2245,15 +2249,16 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EDI_DeliveryNote");
+                    b.ToTable("EDI_DeliveryNote", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.EdiInvoice", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("AllowanceChargeQualifier")
                         .HasColumnType("nvarchar(max)");
@@ -2775,15 +2780,16 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EDI_Invoice");
+                    b.ToTable("EDI_Invoice", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.EdiOrder", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Buyer_ContactCode")
                         .HasColumnType("nvarchar(max)");
@@ -3113,15 +3119,16 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EDI_Order");
+                    b.ToTable("EDI_Order", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.EdiOrderConfirmation", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("AuftragsId")
                         .HasColumnType("int");
@@ -3448,15 +3455,16 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EDI_OrderConfirmation");
+                    b.ToTable("EDI_OrderConfirmation", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.EdiScheduleAgreement", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Buyer_ContactCode")
                         .HasColumnType("nvarchar(max)");
@@ -3671,15 +3679,16 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EDI_ScheduleAgreement");
+                    b.ToTable("EDI_ScheduleAgreement", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.LineItemDeliveryNote", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BuyersArticleNumber")
                         .HasColumnType("nvarchar(max)");
@@ -3833,15 +3842,16 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasIndex("EdiDeliveryNoteId");
 
-                    b.ToTable("EDI_LineItemDeliveryNote");
+                    b.ToTable("EDI_LineItemDeliveryNote", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.LineItemInvoice", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BuyersArticleNumber")
                         .HasColumnType("nvarchar(max)");
@@ -4010,15 +4020,16 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasIndex("EdiInvoiceId");
 
-                    b.ToTable("EDI_LineItemInvoice");
+                    b.ToTable("EDI_LineItemInvoice", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.LineItemOrder", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ActionRequestCoded")
                         .HasColumnType("nvarchar(max)");
@@ -4148,15 +4159,16 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasIndex("EdiOrderId");
 
-                    b.ToTable("EDI_LineItemOrder");
+                    b.ToTable("EDI_LineItemOrder", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.LineItemOrderConfirmation", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ActionRequestCoded")
                         .HasColumnType("nvarchar(max)");
@@ -4304,15 +4316,16 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasIndex("EdiOrderConfirmationId");
 
-                    b.ToTable("EDI_LineItemOrderConfirmation");
+                    b.ToTable("EDI_LineItemOrderConfirmation", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.LineItemSchedule", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int?>("BackorderedItemQuantity")
                         .HasColumnType("int");
@@ -4457,15 +4470,16 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasIndex("EdiScheduleAgreementId");
 
-                    b.ToTable("EDI_LineItemSchedule");
+                    b.ToTable("EDI_LineItemSchedule", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.RequestLog", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
@@ -4503,15 +4517,16 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RequestLog");
+                    b.ToTable("RequestLog", "dbo");
                 });
 
             modelBuilder.Entity("Portal.Common.Entity.Entities.Audit.Audit", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("AuditType")
                         .HasColumnType("int");
@@ -4552,7 +4567,7 @@ namespace EDI.DataAccess.Migrations
 
                     b.HasIndex("EntityType");
 
-                    b.ToTable("AuditLogs");
+                    b.ToTable("AuditLogs", "dbo");
                 });
 
             modelBuilder.Entity("EDI.DataAccess.Entities.LineItemDeliveryNote", b =>

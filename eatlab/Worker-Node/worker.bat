@@ -1,1 +1,0 @@
-java -jar dms-worker-1.0-SNAPSHOT.jar --eatlab.dms.worker.id=Table1 --eatlab.dms.worker.scan.directory=F:\temp

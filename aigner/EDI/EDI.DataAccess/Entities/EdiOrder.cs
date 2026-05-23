@@ -32,7 +32,7 @@ namespace EDI.DataAccess.Entities
             base.init(tsorder.BGM);
             base.init(tsorder.UNH);
             if (tsorder.FTX != null)
-                base.init(tsorder.FTX[0]);
+                base.init(tsorder.FTX);
             base.init(tsorder.UNT);
             //ReferenceDate= tsorder.DTM.
             if (tsorder.CUXLoop != null)
@@ -157,7 +157,7 @@ namespace EDI.DataAccess.Entities
             base.init(tsorderchg.BGM);
             base.init(tsorderchg.UNH);
             if (tsorderchg.FTX != null)
-                base.init(tsorderchg.FTX[0]);
+                base.init(tsorderchg.FTX);
             base.init(tsorderchg.UNT);
             if (tsorderchg.CUXLoop != null)
             {
@@ -321,12 +321,13 @@ namespace EDI.DataAccess.Entities
                 result.DTM = new List<DTM>();
                 result.DTM.Add(base.generateDocumentDTM());
 
-                var ftx = base.generateFTX();
-                if (ftx != null)
+                var ftxs = base.generateFTX();
+                if (ftxs != null && ftxs.Any())
                 {
-                    result.FTX = new List<FTX>();
-                    ftx.Textfunctioncoded_02 = "1";
-                    result.FTX.Add(ftx);
+                    ftxs.ForEach(ftx => {
+                        ftx.Textfunctioncoded_02 = "1";
+                    });
+                    result.FTX = ftxs;
                 }
 
                 result.RFFLoop = new List<Loop_RFF_ORDERS>();
@@ -505,12 +506,13 @@ namespace EDI.DataAccess.Entities
                 result.DTM = new List<DTM>();
                 result.DTM.Add(base.generateDocumentDTM());
 
-                var ftx = base.generateFTX();
-                if (ftx != null)
+                var ftxs = base.generateFTX();
+                if (ftxs != null && ftxs.Any())
                 {
-                    result.FTX = new List<FTX>();
-                    ftx.Textfunctioncoded_02 = "1";
-                    result.FTX.Add(ftx);
+                    ftxs.ForEach(ftx => {
+                        ftx.Textfunctioncoded_02 = "1";
+                    });
+                    result.FTX = ftxs;
                 }
 
                 result.RFFLoop = new List<Loop_RFF_ORDCHG>();

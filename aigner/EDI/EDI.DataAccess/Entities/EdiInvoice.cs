@@ -13,7 +13,7 @@ using SendGrid.Helpers.Mail;
 
 namespace EDI.DataAccess.Entities
 {
-    public class EdiInvoice : EdiMessage<EdiInvoice>, ISupplierContact, IFinancialInstitution, IDocumentReference, IFreeText
+    public class EdiInvoice : EdiMessage<EdiInvoice>, ISupplierContact, IFinancialInstitution, IDocumentReference//, IFreeText
     {
         public EdiInvoice()
         {
@@ -467,7 +467,7 @@ namespace EDI.DataAccess.Entities
             if (tsInvoice.FTX != null)
             {
                 //base.init(tsInvoice.FTX.FirstOrDefault(x => x.Textsubjectqualifier_01 == "REG"));
-                base.init(tsInvoice.FTX.FirstOrDefault(x => x.Textsubjectqualifier_01 == "REG"));
+                base.init(tsInvoice.FTX.Where(x => x.Textsubjectqualifier_01 == "REG").ToList());
                 //GeneralRemark = tsInvoice.FTX.FirstOrDefault(x => x.Textsubjectqualifier_01 == "AAI" && x.Textfunctioncoded_02 == "1")?.TEXTLITERAL_04?.Freetext_01;
                 //AignerFairness = tsInvoice.FTX.FirstOrDefault(x => x.Textsubjectqualifier_01 == "ABS" && x.Textfunctioncoded_02 == "1")?.TEXTLITERAL_04?.Freetext_01;
             }
@@ -865,11 +865,10 @@ namespace EDI.DataAccess.Entities
             result.DTM = new List<DTM>();
             result.DTM.Add(base.generateDocumentDTM());
 
-            var ftx = base.generateFTX();
-            if (ftx != null)
+            var ftxs = base.generateFTX();
+            if (ftxs != null && ftxs.Any())
             {
-                result.FTX = new List<FTX>();
-                result.FTX.Add(ftx);
+                result.FTX = ftxs;
             }
 
             var reffDoc = generateRFF();
