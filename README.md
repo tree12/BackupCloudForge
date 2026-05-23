@@ -213,18 +213,10 @@ All non-`AllowAnonymous` endpoints require an authenticated principal (configure
   - `ordrsp-d.96a-ktm_1_0.txt`
   - `delfor-d.96a-ktm_1_0.txt`
   - `invoic-d.96a-ktm_1_0.txt`
-- The `EDI.Web.Test` project contains the automated test suite. Run with:
-
-  ```powershell
-  dotnet test aigner/EDI/EDI.Web.Test/EDI.Web.Test.csproj
-  ```
-
-- `AignerTest` provides a WinForms harness for manual exploration of the parsing / file-generation utilities.
-
 ---
 
 ## 9. Project Status
 
-- Active development branch: `AddFreeTextTo10` (extends free-text handling on line items).
+- The user purchased only the DLL file and did not receive the source code. This project is no longer supported, as the user has moved to a new version. Therefore, the code is no longer in use. Since there is no NDA (Non-Disclosure Agreement), I am able to share the code.
 - Production runtime: ASP.NET Core on Windows; SQL Server back-end.
 - EdiFabric template set: `EdiFabric.Templates.Edifact` (D96A).
