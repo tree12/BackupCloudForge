@@ -1,1 +1,0 @@
-java -jar dms-server-1.0-SNAPSHOT.jar --eatlab.dm.server.directory=F:/temp
