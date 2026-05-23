@@ -217,6 +217,6 @@ All non-`AllowAnonymous` endpoints require an authenticated principal (configure
 
 ## 9. Project Status
 
-- The user purchased only the DLL file and did not receive the source code. This project is no longer supported, as the user has moved to a new version. Therefore, the code is no longer in use. Since there is no NDA (Non-Disclosure Agreement), I am able to share the code.
+- The user purchased only the DLL files and did not receive the source code. This project is no longer supported, as the user has migrated to a newer version. Therefore, the code is no longer being used. Since there is no NDA (Non-Disclosure Agreement), I am able to share the code.
 - Production runtime: ASP.NET Core on Windows; SQL Server back-end.
 - EdiFabric template set: `EdiFabric.Templates.Edifact` (D96A).
